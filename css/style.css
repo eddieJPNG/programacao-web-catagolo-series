@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  /* ... */
+}
+
+body {
+  background-image: url("https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg");
+  
+  /* Impede que a imagem se repita */
+  background-repeat: no-repeat;
+  
+  /* Faz a imagem cobrir toda a área sem distorcer */
+  background-size: cover;
+  
+  /* Centraliza a imagem na tela */
+  background-position: center;
+  
+  /* Mantém o fundo fixo no scroll (opcional) */
+  background-attachment: fixed;
+  
+  /* Garante que o body ocupe no mínimo a altura total da tela */
+  min-height: 100vh;
+}
