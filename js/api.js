@@ -1,5 +1,7 @@
 const BASE_URL = 'https://api.tvmaze.com';
 
+
+// vi a questão de dar map na saida da função
 async function searchShows(query) {
     const url = `${BASE_URL}/search/shows?q=${encodeURIComponent(query)}`;
     
@@ -9,9 +11,12 @@ async function searchShows(query) {
         throw new Error (`Erro HTTP: ${response.status}`);
     }
 
-    const data = await response.json();
+    const results = await response.json();
 
-    return data;
+    
+    return results.map(function (result) {
+        return result.show;
+    });
 }
 
 

@@ -4,6 +4,13 @@
   /* ... */
 }
 
+
+@import "tailwindcss";
+
+@theme {
+  /* ... */
+}
+
 body {
   background-image: url("https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg");
   
