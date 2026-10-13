@@ -164,6 +164,7 @@ function createCard(show) {
 
   const listItem = document.createElement("li");
 
+
   const article = document.createElement("article");
   article.className = "card";
 
@@ -179,6 +180,7 @@ function createCard(show) {
   const title = document.createElement("h3");
   title.className = "card-titulo";
   title.textContent = name;
+  title.className = "text-yellow-500 text-2x1"
 
   const metaGenres = document.createElement("p");
   metaGenres.className = "card-meta";
@@ -225,8 +227,11 @@ function renderResults(list) {
     }
   });
 
+ 
+
   grid.appendChild(fragment);
   elements.resultsSection.hidden = false;
+  elements.resultsSection = "border flex justify-around"
 }
 
 function renderDetails(show) {
@@ -242,12 +247,14 @@ function renderDetails(show) {
     const placeholder = document.createElement("div");
     placeholder.className = "detalhes-imagem-placeholder";
     placeholder.textContent = "Sem imagem";
+    image.class = "block mx-auto mb-6 max-w-full h-auto";
     container.appendChild(placeholder);
   } else {
     const image = document.createElement("img");
     image.className = "detalhes-imagem";
     image.src = imageUrl;
     image.alt = "Imagem da série " + safeText(show.name, "");
+    image.className = "block mx-auto mb-6 max-w-full h-auto";
 
     image.addEventListener("error", function () {
       const alternative = document.createElement("div");
@@ -262,11 +269,13 @@ function renderDetails(show) {
   }
 
   const body = document.createElement("div");
-  body.className = "detalhes-corpo";
+  body.className = "bg-gray-800 p-6 rounded-lg shadow-md text-white";
+
 
   const title = document.createElement("h3");
   title.textContent = safeText(show.name, "Série sem nome");
   body.appendChild(title);
+  title.className = " text-6xl font-mono text-yellow-500 mb-4";
 
   const summary = document.createElement("p");
   summary.className = "detalhes-resumo";
@@ -277,22 +286,25 @@ function renderDetails(show) {
   list.className = "detalhes-lista";
 
   const fields = [
-    ["Idioma", safeText(show.language, "Não informado")],
-    ["Estreia", safeText(show.premiered, "Não informado")],
-    ["Avaliação", ratingOf(show)],
-    ["Emissora", networkOf(show)],
-    ["Gêneros", genresOf(show)],
+    ["Language", safeText(show.language, "Não informado")],
+    ["Premiere", safeText(show.premiered, "Não informado")],
+    ["Rating", ratingOf(show)],
+    ["Network", networkOf(show)],
+    ["Genres", genresOf(show)],
     ["Status", safeText(show.status, "Status não informado")],
   ];
 
   fields.forEach(function (pair) {
     const term = document.createElement("dt");
     term.textContent = pair[0];
+    term.className = " text-2x1 mb-2 font-mono text-yellow-500";
     const definition = document.createElement("dd");
     definition.textContent = pair[1];
     list.appendChild(term);
     list.appendChild(definition);
   });
+
+  
 
   body.appendChild(list);
   container.appendChild(body);

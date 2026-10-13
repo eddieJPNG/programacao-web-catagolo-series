@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+<!DOCTYPE html>      
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo de Séries</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">     
 </head>
 <body>
-  <header role="banner" class=" text-6xl text-center font-mono text-white [text-stroke:2px_black] [-webkit-text-stroke:2px_black]">
+  <header role="banner" class=" text-6xl text-center font-mono text-black [text-stroke:2px_white] [-webkit-text-stroke:2px_white]">
     <h1>Catálogo de Séries</h1>
   </header>
 
-  <main class=" py-36 text-center text-black space-y-10">
+  <main class=" py-36 text-center text-white space-y-10">
     <!-- Região de busca -->
     <section aria-labelledby="search-heading">
       <h2 id="search-heading" class="sr-only ">Pesquisa de séries</h2>
@@ -50,7 +50,7 @@
     <section id="results-section" aria-labelledby="results-heading" hidden>
       <h2 id="results-heading">Resultados</h2>
       <ul id="results-list" role="list"></ul>
-    </section>
+    </section> 
 
     <!-- Detalhes da série -->
     <section id="details-section" aria-labelledby="details-heading" hidden>
@@ -59,7 +59,7 @@
     </section>
   </main>
 
-  <footer role="contentinfo" class=" flex justify-center text-black ">
+  <footer role="contentinfo" class=" flex justify-center text-white ">
     <p>Dados fornecidos pela <a href="https://www.tvmaze.com/api" target="_blank" rel="noopener">TVmaze API</a>.</p>
   </footer>
 
