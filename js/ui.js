@@ -166,21 +166,22 @@ function createCard(show) {
 
 
   const article = document.createElement("article");
-  article.className = "card";
+  article.className = "card flex flex-col h-full";
 
   const button = document.createElement("button");
   button.type = "button";
   button.dataset.id = String(show.id);
+  button.className = "flex flex-col flex-1";
 
   button.appendChild(createCardImage(show));
 
   const body = document.createElement("div");
-  body.className = "card-corpo";
+  body.className = "card-corpo flex-1 flex flex-col";
 
   const title = document.createElement("h3");
   title.className = "card-titulo";
   title.textContent = name;
-  title.className = "text-yellow-500 text-2x1"
+  title.className = "text-yellow-500 text-2xl"
 
   const metaGenres = document.createElement("p");
   metaGenres.className = "card-meta";
@@ -231,7 +232,7 @@ function renderResults(list) {
 
   grid.appendChild(fragment);
   elements.resultsSection.hidden = false;
-  elements.resultsSection = "border flex justify-around"
+  elements.resultsList.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6";
 }
 
 function renderDetails(show) {
@@ -247,7 +248,7 @@ function renderDetails(show) {
     const placeholder = document.createElement("div");
     placeholder.className = "detalhes-imagem-placeholder";
     placeholder.textContent = "Sem imagem";
-    image.class = "block mx-auto mb-6 max-w-full h-auto";
+    image.className = "block mx-auto mb-6 max-w-full h-auto";
     container.appendChild(placeholder);
   } else {
     const image = document.createElement("img");
@@ -278,8 +279,8 @@ function renderDetails(show) {
   title.className = " text-6xl font-mono text-yellow-500 mb-4";
 
   const summary = document.createElement("p");
-  summary.className = "detalhes-resumo";
-  summary.textContent = summaryAsText(show);
+  summary.className = "detalhes-resumo  max-w-prose text-base md:text-lg antialiased mx-auto";
+  summary.textContent = summaryAsText(show);2
   body.appendChild(summary);
 
   const list = document.createElement("dl");

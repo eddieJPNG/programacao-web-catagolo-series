@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">     
 </head>
 <body>
-  <header role="banner" class=" text-6xl text-center font-mono text-black [text-stroke:2px_white] [-webkit-text-stroke:2px_white]">
+  <header role="banner" class=" text-6xl text-center font-mono text-yellow-500 py-10">
     <h1>Catálogo de Séries</h1>
   </header>
 
@@ -20,19 +20,19 @@
         <label for="search-input" class=" text-2xl">Nome da série</label>
         <input  class=" text-black border"type="search" id="search-input" name="q"
                placeholder="Ex: Breaking Bad"
-               required aria-describedby="search-hint" class=" text-2xl border">
-        <p id="search-hint">Digite o nome e pressione Enter ou clique em Buscar.</p>
+               required aria-describedby="search-hint" class=" text-2xl border pl-8">
+        <p id="search-hint" class="mx-auto">Digite o nome e pressione Enter ou clique em Buscar.</p>
         <button type="submit" class=" border  p-2 rounded-3xl cursor-pointer">Buscar</button>
       </form>
     </section>
 
     <!-- Região de filtros -->
     <section id="filters-section" aria-labelledby="filters-heading" hidden >
-      <h2 id="filters-heading">Filtros</h2>
-      <div>
-        <label for="genre-filter">Gênero</label>
+      <h2 id="filters-heading" class="text-4xl font-mono text-yellow-500 mb-4">Filtros</h2>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md text-black">
+        <label for="genre-filter" class="text-white">Gênero</label>
         <select id="genre-filter"><option value="">Todos</option></select>
-        <label for="status-filter">Status</label>
+        <label for="status-filter" class="text-white">Status</label>
         <select id="status-filter">
           <option value="">Todos</option>
           <option value="Running">Em exibição</option>
@@ -48,13 +48,13 @@
 
     <!-- Lista de resultados -->
     <section id="results-section" aria-labelledby="results-heading" hidden>
-      <h2 id="results-heading">Resultados</h2>
+      <h2 id="results-heading" class="text-4xl font-mono text-yellow-500 mb-4">Resultados</h2>
       <ul id="results-list" role="list"></ul>
     </section> 
 
     <!-- Detalhes da série -->
     <section id="details-section" aria-labelledby="details-heading" hidden>
-      <h2 id="details-heading">Detalhes da Série</h2>
+      <h2 id="details-heading" class="text-4xl font-mono text-yellow-500 mb-4">Detalhes da Série</h2>
       <article id="details-content"></article>
     </section>
   </main>
