@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  /* ... */
+}
+
+
+body {
+  background-color: black;
+}
