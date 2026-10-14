@@ -4,6 +4,8 @@ Aplicação web para consulta e exploração de informações sobre séries de t
 
 ---
 
+<img src="assets/tela.png" alt="tela">
+
 ## Descrição
 
 O **Catálogo de Séries** é uma Single Page Application (SPA) client-side que oferece uma interface intuitiva para descobrir e explorar séries de TV. A aplicação realiza buscas em tempo real na API do TVmaze, exibe os resultados em uma grade responsiva e permite ao usuário acessar informações detalhadas de cada série, incluindo resumo, elenco, rede de exibição, avaliação e status.
